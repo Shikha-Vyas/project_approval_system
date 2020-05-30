@@ -1,7 +1,7 @@
 FROM python:3.6-alpine
 
 # File Author
-MAINTAINER Ankit Prasad
+MAINTAINER Shikha Vyas
 
 COPY . /app
 RUN mkdir /app/uploads
