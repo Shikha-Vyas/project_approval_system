@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <title>Faculty Dashboard</title>
+<style>
+  body {
+        background-image: url('../static/images/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+  .form-control{
+    width: 400%;
+  }
+  h2 {
+  line-height: 3;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  color: turquoise;
+  font-size: 60px;
+  text-align: center;
+}
+h3 {
+  line-height: 3;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  color: turquoise;
+  font-size: 45px;
+  text-align: center;
+}
+.container{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Faculty Dashboard</h2>
+<br>
+<h3>Welcome {{username}}</h3>
+<div class="container">
+<form action = "/faculty_course" method="POST">
+      <label for = "course"></label>
+      <select class="form-control" id="course" name="course"> 
+      {% for item in results %}
+        <option value="{{item[0][0]}}">{{item[0][1]}}</option>
+      {% endfor %}
+    </select> 
+    <br>
+    <button class="btn btn-outline-success" type="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>
