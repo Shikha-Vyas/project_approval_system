@@ -20,6 +20,6 @@ node{
         }
         stage('Deploying New Version')
         {
-            build job: 'deploy_pas'
+            build job: 'deploy_proj'
         }
 }
