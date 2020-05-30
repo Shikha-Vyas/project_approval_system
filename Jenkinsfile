@@ -9,7 +9,7 @@ node{
         }
         stage('Containerizing')
         {
-                app = docker.build("ankitpd/project_approval_system")
+                app = docker.build("shikha02/project_approval_system")
         }
         stage('Pushing Image')
         {
